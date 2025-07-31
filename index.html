@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommender</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Movie Recommender App</h1>
+        <nav>
+            <button id="showLoginFormBtn">Login</button>
+            <button id="showRegisterFormBtn">Register</button>
+            <button id="logoutBtn" style="display: none;">Logout</button>
+            <span id="welcomeMessage" style="display: none;"></span>
+        </nav>
+    </header>
+
+    <main>
+        <section id="authForms" class="hidden">
+            <h2>Authentication</h2>
+            <div id="loginForm" class="auth-form hidden">
+                <h3>Login</h3>
+                <input type="text" id="loginUsername" placeholder="Username">
+                <input type="password" id="loginPassword" placeholder="Password">
+                <button id="loginSubmitBtn">Login</button>
+                <p id="loginMessage" class="message"></p>
+            </div>
+
+            <div id="registerForm" class="auth-form hidden">
+                <h3>Register</h3>
+                <input type="text" id="registerUsername" placeholder="Username">
+                <input type="password" id="registerPassword" placeholder="Password">
+                <button id="registerSubmitBtn">Register</button>
+                <p id="registerMessage" class="message"></p>
+            </div>
+        </section>
+
+        <section id="movieContent" class="hidden">
+            <div class="search-section">
+                <h2>Search Movies</h2>
+                <input type="text" id="movieSearchInput" placeholder="Enter movie title...">
+                <button id="movieSearchBtn">Search</button>
+                <p id="searchMessage" class="message"></p>
+            </div>
+
+            <div class="movie-list-section">
+                <h2>Popular Movies</h2>
+                <button id="loadPopularMoviesBtn">Load Popular Movies</button>
+                <p id="popularMoviesMessage" class="message"></p>
+                <div id="popularMoviesContainer" class="movie-container"></div>
+            </div>
+
+            <div class="movie-list-section">
+                <h2>Search Results</h2>
+                <div id="searchResultsContainer" class="movie-container"></div>
+            </div>
+
+            <div class="movie-list-section">
+                <h2>Recommended Movies (Protected)</h2>
+                <p id="protectedMessage" class="message"></p>
+                <div id="recommendedMoviesContainer" class="movie-container"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
